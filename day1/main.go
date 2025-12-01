@@ -96,5 +96,27 @@ func (day Day1) Part1() {
 }
 
 func (Day1) Part2() {
-	fmt.Println("part 2")
+	counter := 0
+	dial := Dial{current: 50}
+
+	for _, operation := range operations {
+		for range operation.turns {
+			switch operation.dir {
+			case RIGHT:
+				dial.TurnRight(1)
+				if dial.current == 0 {
+					counter += 1
+				}
+
+			case LEFT:
+				dial.TurnLeft(1)
+				if dial.current == 0 {
+					counter += 1
+				}
+			default:
+				log.Fatal("fatal")
+			}
+		}
+	}
+	fmt.Println("Part 2 Answer: ", counter)
 }
