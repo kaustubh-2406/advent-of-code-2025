@@ -36,7 +36,7 @@ func (d *Dial) TurnRight(num int) { d.current = (d.current + num + 100) % 100 }
 // =========================================
 // Day 1
 // =========================================
-type Day1 struct{}
+type Solution struct{}
 
 func ParseInput() error {
 	// file, err := os.Open("day1/sample.txt")
@@ -71,9 +71,9 @@ func ParseInput() error {
 	return nil
 }
 
-var err error = ParseInput()
+func (Solution) Part1() {
+	ParseInput()
 
-func (day Day1) Part1() {
 	counter := 0
 	dial := Dial{current: 50}
 
@@ -95,7 +95,9 @@ func (day Day1) Part1() {
 	fmt.Println("Part 1 Answer: ", counter)
 }
 
-func (Day1) Part2() {
+func (Solution) Part2() {
+	ParseInput()
+
 	counter := 0
 	dial := Dial{current: 50}
 

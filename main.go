@@ -5,6 +5,7 @@ import (
 	"os"
 
 	day1 "aoc-2025/day1"
+	day2 "aoc-2025/day2"
 )
 
 type Day interface {
@@ -14,7 +15,8 @@ type Day interface {
 
 func main() {
 	days := map[string]Day{
-		"1": day1.Day1{},
+		"1": day1.Solution{},
+		"2": day2.Solution{},
 	}
 
 	args := os.Args[1:]
