@@ -8,6 +8,7 @@ import (
 	day2 "aoc-2025/day2"
 	day3 "aoc-2025/day3"
 	day4 "aoc-2025/day4"
+	day5 "aoc-2025/day5"
 )
 
 type Day interface {
@@ -21,6 +22,7 @@ func main() {
 		"2": day2.Solution{},
 		"3": day3.Solution{},
 		"4": day4.Solution{},
+		"5": day5.Solution{},
 	}
 
 	args := os.Args[1:]
